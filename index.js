@@ -22,20 +22,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/str', (req, res) => {
-	res.end(`<div>
-				 <h1>Stranica</h1>
-				 <nav>
-					<ul>
-						<li>
-							<a href="/">Glavnoi</a>
-						</li>
-						
-						<li>
-							<a href="/str">Stranica</a>
-						</li>
-					</ul>
-				 </nav>
-			 </div>`);
+	res.end(`index.html`);
 })
 
 app.listen(PORT, () => {
