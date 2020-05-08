@@ -17,7 +17,8 @@ app.get('/', (req, res) => {
 						</li>
 					</ul>
 				 </nav>
-			 </div>`);
+			 </div>
+	<script src="js.js"></script>`);
 });
 
 app.get('/str', (req, res) => {
