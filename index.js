@@ -3,10 +3,10 @@ var express = require('express');
 var app = express();
 const PORT = process.env.PORT || 80
 
-// app.listen(PORT);
+app.listen(PORT);
 
-// var server = require('http').createServer(app);
-var io = require('socket.io').listen(PORT).createServer(app);
+var server = require('http').createServer(app);
+var io = require('socket.io').listen(server);
 
 // Отслеживание порта
 // server.listen(3000);
