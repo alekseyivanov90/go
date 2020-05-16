@@ -19,11 +19,11 @@ app.get('/', function(request, respons) {
 
 // Массив со всеми подключениями
 connections = [];
-/*
+
 // Функция, которая сработает при подключении к странице
 // Считается как новый пользователь
 io.sockets.on('connection', function(socket) {
-	console.log("Успешное соединение");
+	// console.log("Успешное соединение");
 	// Добавление нового соединения в массив
 	connections.push(socket);
 
@@ -41,4 +41,4 @@ io.sockets.on('connection', function(socket) {
 		io.sockets.emit('add mess', {mess: data.mess, name: data.name, className: data.className});
 	});
 });
-*/
+
