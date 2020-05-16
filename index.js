@@ -6,8 +6,7 @@ const PORT = process.env.PORT || 80
 app.listen(PORT);
 
 // var server = require('http').createServer(app);
-var io = require('socket.io');
-// .listen(app);
+var io = require('socket.io').listen(80);
 
 // Отслеживание порта
 // server.listen(3000);
@@ -19,14 +18,13 @@ app.get('/', function(request, respons) {
 
 // Массив со всеми подключениями
 connections = [];
-
+/*
 // Функция, которая сработает при подключении к странице
 // Считается как новый пользователь
 io.sockets.on('connection', function(socket) {
 	// console.log("Успешное соединение");
 	// Добавление нового соединения в массив
 	connections.push(socket);
-/*
 	// Функция, которая срабатывает при отключении от сервера
 	socket.on('disconnect', function(data) {
 		// Удаления пользователя из массива
