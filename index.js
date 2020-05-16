@@ -26,7 +26,7 @@ io.sockets.on('connection', function(socket) {
 	// console.log("Успешное соединение");
 	// Добавление нового соединения в массив
 	connections.push(socket);
-
+/*
 	// Функция, которая срабатывает при отключении от сервера
 	socket.on('disconnect', function(data) {
 		// Удаления пользователя из массива
@@ -41,4 +41,4 @@ io.sockets.on('connection', function(socket) {
 		io.sockets.emit('add mess', {mess: data.mess, name: data.name, className: data.className});
 	});
 });
-
+*/
