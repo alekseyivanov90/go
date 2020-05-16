@@ -6,7 +6,8 @@ const PORT = process.env.PORT || 80
 app.listen(PORT);
 
 // var server = require('http').createServer(app);
-var io = require('socket.io').listen(app);
+var io = require('socket.io');
+// .listen(app);
 
 // Отслеживание порта
 // server.listen(3000);
@@ -15,10 +16,10 @@ var io = require('socket.io').listen(app);
 app.get('/', function(request, respons) {
 	respons.sendFile(__dirname + '/index.html');
 });
-/*
+
 // Массив со всеми подключениями
 connections = [];
-
+/*
 // Функция, которая сработает при подключении к странице
 // Считается как новый пользователь
 io.sockets.on('connection', function(socket) {
