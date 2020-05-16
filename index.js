@@ -14,11 +14,6 @@ var io = require('socket.io').listen(server);
 // Массив со всеми подключениями
 connections = [];
 
-// Отслеживание url адреса и отображение нужной HTML страницы
-app.get('/', function(request, respons) {
-	respons.sendFile(__dirname + '/index.html');
-});
-
 // Функция, которая сработает при подключении к странице
 // Считается как новый пользователь
 io.sockets.on('connection', function(socket) {
@@ -40,3 +35,7 @@ io.sockets.on('connection', function(socket) {
 	});
 });
 
+// Отслеживание url адреса и отображение нужной HTML страницы
+app.get('/', function(request, respons) {
+	respons.sendFile(__dirname + '/index.html');
+});
