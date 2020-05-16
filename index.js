@@ -11,6 +11,11 @@ var io = require('socket.io').listen(server);
 // Отслеживание порта
 // server.listen(3000);
 
+// Отслеживание url адреса и отображение нужной HTML страницы
+app.get('/', function(request, respons) {
+	respons.sendFile(__dirname + '/index.html');
+});
+
 // Массив со всеми подключениями
 connections = [];
 
@@ -33,9 +38,4 @@ io.sockets.on('connection', function(socket) {
 		// которое будет вызвано у всех пользователей и у них добавиться новое сообщение 
 		io.sockets.emit('add mess', {mess: data.mess, name: data.name, className: data.className});
 	});
-});
-
-// Отслеживание url адреса и отображение нужной HTML страницы
-app.get('/', function(request, respons) {
-	respons.sendFile(__dirname + '/index.html');
 });
