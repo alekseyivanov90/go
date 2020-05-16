@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 80
 
 app.listen(PORT);
 
-var server = require('http').createServer(app);
+var server = require('https').createServer(app);
 var io = require('socket.io').listen(server);
 
 // Отслеживание порта
