@@ -2,10 +2,11 @@
 var express = require('express');
 var app = express();
 const PORT = process.env.PORT || 80
-// var server = require('http').createServer(app);
-var io = require('socket.io')
 
-// .listen(PORT);
+app.listen(PORT);
+
+// var server = require('http').createServer(app);
+var io = require('socket.io').listen(PORT);
 
 // Отслеживание порта
 // server.listen(3000);
