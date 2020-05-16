@@ -5,20 +5,19 @@ const PORT = process.env.PORT || 80
 
 app.listen(PORT);
 
-sdas
 var server = require('https').createServer(app);
 var io = require('socket.io').listen(server);
 
 // Отслеживание порта
 // server.listen(3000);
 
+// Массив со всеми подключениями
+connections = [];
+
 // Отслеживание url адреса и отображение нужной HTML страницы
 app.get('/', function(request, respons) {
 	respons.sendFile(__dirname + '/index.html');
 });
-
-// Массив со всеми подключениями
-connections = [];
 
 // Функция, которая сработает при подключении к странице
 // Считается как новый пользователь
