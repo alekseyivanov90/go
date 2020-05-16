@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<!-- Подключение Bootstrap чтобы все выглядело красиво -->
+	<!-- РџРѕРґРєР»СЋС‡РµРЅРёРµ Bootstrap С‡С‚РѕР±С‹ РІСЃРµ РІС‹РіР»СЏРґРµР»Рѕ РєСЂР°СЃРёРІРѕ -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-	<title>Чат программа</title>
-	<!-- Свои стили -->
+	<title>Р§Р°С‚ РїСЂРѕРіСЂР°РјРјР°</title>
+	<!-- РЎРІРѕРё СЃС‚РёР»Рё -->
 	<style>
 		body {
 			background: #fcfcfc;
@@ -15,56 +14,56 @@
 	</style>
 </head>
 <body>
-	<!-- Создание меню на сайте (без функций) -->
+	<!-- РЎРѕР·РґР°РЅРёРµ РјРµРЅСЋ РЅР° СЃР°Р№С‚Рµ (Р±РµР· С„СѓРЅРєС†РёР№) -->
 	<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
 		<h5 class="my-0 mr-md-auto">itProger</h5>
 		<nav class="my-2 my-md-0 mr-md-3">
-			<a class="p-2 text-dark" href="#">Главная</a>
-			<a class="p-2 text-dark" href="#">Про нас</a>
-			<a class="p-2 text-dark" href="#">Поддержка</a>
-			<a class="p-2 text-dark" href="#">Цены</a>
+			<a class="p-2 text-dark" href="#">Р“Р»Р°РІРЅР°СЏ</a>
+			<a class="p-2 text-dark" href="#">РџСЂРѕ РЅР°СЃ</a>
+			<a class="p-2 text-dark" href="#">РџРѕРґРґРµСЂР¶РєР°</a>
+			<a class="p-2 text-dark" href="#">Р¦РµРЅС‹</a>
 		</nav>
-		<a class="btn btn-outline-primary" href="#">Регистрация</a>
+		<a class="btn btn-outline-primary" href="#">Р РµРіРёСЃС‚СЂР°С†РёСЏ</a>
 	</div>
-	<!-- Основная часть страницы -->
+	<!-- РћСЃРЅРѕРІРЅР°СЏ С‡Р°СЃС‚СЊ СЃС‚СЂР°РЅРёС†С‹ -->
 	<div class="container">
 		<div class="py-5 text-center">
-			<h2>Чат программа</h2>
-			<p class="lead">Укажите ваше имя и начинайте переписку</p>
+			<h2>Р§Р°С‚ РїСЂРѕРіСЂР°РјРјР°</h2>
+			<p class="lead">РЈРєР°Р¶РёС‚Рµ РІР°С€Рµ РёРјСЏ Рё РЅР°С‡РёРЅР°Р№С‚Рµ РїРµСЂРµРїРёСЃРєСѓ</p>
 		</div>
 		<div class="row">
 			<div class="col-6">
-				<!-- Форма для получения сообщений и имени -->
-				<h3>Форма сообщений</h3>
+				<!-- Р¤РѕСЂРјР° РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ СЃРѕРѕР±С‰РµРЅРёР№ Рё РёРјРµРЅРё -->
+				<h3>Р¤РѕСЂРјР° СЃРѕРѕР±С‰РµРЅРёР№</h3>
 				<form id="messForm">
-					<label for="name">Имя</label>
-					<input type="text" name="name" id="name" placeholder="Введите имя" class="form-control">
+					<label for="name">РРјСЏ</label>
+					<input type="text" name="name" id="name" placeholder="Р’РІРµРґРёС‚Рµ РёРјСЏ" class="form-control">
 					<br>
-					<label for="message">Сообщение</label>
-					<textarea name="message" id="message" class="form-control" placeholder="Введите сообщение"></textarea>
+					<label for="message">РЎРѕРѕР±С‰РµРЅРёРµ</label>
+					<textarea name="message" id="message" class="form-control" placeholder="Р’РІРµРґРёС‚Рµ СЃРѕРѕР±С‰РµРЅРёРµ"></textarea>
 					<br>
-					<input type="submit" value="Отправить" class="btn btn-danger">
+					<input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ" class="btn btn-danger">
 				</form>
 			</div>
 			<div class="col-6">
-				<h3>Сообщения</h3>
-				<!-- Вывод всех сообщений будет здесь -->
+				<h3>РЎРѕРѕР±С‰РµРЅРёСЏ</h3>
+				<!-- Р’С‹РІРѕРґ РІСЃРµС… СЃРѕРѕР±С‰РµРЅРёР№ Р±СѓРґРµС‚ Р·РґРµСЃСЊ -->
 				<div id="all_mess"></div>
 			</div>
 		</div>
 	</div>
-	<!-- Подключаем jQuery, а также Socket.io -->
+	<!-- РџРѕРґРєР»СЋС‡Р°РµРј jQuery, Р° С‚Р°РєР¶Рµ Socket.io -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
 	<script>
-		// У каждого пользователя будет случайный стиль для блока с сообщенями,
-		// поэтому в этом кусочке кода мы получаем случайные числа
+		// РЈ РєР°Р¶РґРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ Р±СѓРґРµС‚ СЃР»СѓС‡Р°Р№РЅС‹Р№ СЃС‚РёР»СЊ РґР»СЏ Р±Р»РѕРєР° СЃ СЃРѕРѕР±С‰РµРЅСЏРјРё,
+		// РїРѕСЌС‚РѕРјСѓ РІ СЌС‚РѕРј РєСѓСЃРѕС‡РєРµ РєРѕРґР° РјС‹ РїРѕР»СѓС‡Р°РµРј СЃР»СѓС‡Р°Р№РЅС‹Рµ С‡РёСЃР»Р°
 		var min = 1;
 		var max = 6;
 		var random = Math.floor(Math.random() * (max - min)) + min;
 
-		// Устаналиваем класс в переменную в зависимости от случайного числа
-		// Эти классы взяты из Bootstrap стилей
+		// РЈСЃС‚Р°РЅР°Р»РёРІР°РµРј РєР»Р°СЃСЃ РІ РїРµСЂРµРјРµРЅРЅСѓСЋ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СЃР»СѓС‡Р°Р№РЅРѕРіРѕ С‡РёСЃР»Р°
+		// Р­С‚Рё РєР»Р°СЃСЃС‹ РІР·СЏС‚С‹ РёР· Bootstrap СЃС‚РёР»РµР№
 		var alertClass;
 		switch (random) {
 			case 1:
@@ -87,32 +86,32 @@
 				break;
 		}
 
-		// Функция для работы с данными на сайте
+		// Р¤СѓРЅРєС†РёСЏ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РґР°РЅРЅС‹РјРё РЅР° СЃР°Р№С‚Рµ
 		$(function() {
-			// Включаем socket.io и отслеживаем все подключения
+			// Р’РєР»СЋС‡Р°РµРј socket.io Рё РѕС‚СЃР»РµР¶РёРІР°РµРј РІСЃРµ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
 			var socket = io.connect();
-			// Делаем переменные на:
-			var $form = $("#messForm"); // Форму сообщений
-			var $name = $("#name"); // Поле с именем
-			var $textarea = $("#message"); // Текстовое поле
-			var $all_messages = $("#all_mess"); // Блок с сообщениями
+			// Р”РµР»Р°РµРј РїРµСЂРµРјРµРЅРЅС‹Рµ РЅР°:
+			var $form = $("#messForm"); // Р¤РѕСЂРјСѓ СЃРѕРѕР±С‰РµРЅРёР№
+			var $name = $("#name"); // РџРѕР»Рµ СЃ РёРјРµРЅРµРј
+			var $textarea = $("#message"); // РўРµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ
+			var $all_messages = $("#all_mess"); // Р‘Р»РѕРє СЃ СЃРѕРѕР±С‰РµРЅРёСЏРјРё
 
-			// Отслеживаем нажатие на кнопку в форме сообщений
+			// РћС‚СЃР»РµР¶РёРІР°РµРј РЅР°Р¶Р°С‚РёРµ РЅР° РєРЅРѕРїРєСѓ РІ С„РѕСЂРјРµ СЃРѕРѕР±С‰РµРЅРёР№
 			$form.submit(function(event) {
-				// Предотвращаем классическое поведение формы
+				// РџСЂРµРґРѕС‚РІСЂР°С‰Р°РµРј РєР»Р°СЃСЃРёС‡РµСЃРєРѕРµ РїРѕРІРµРґРµРЅРёРµ С„РѕСЂРјС‹
 				event.preventDefault();
-				// В сокет отсылаем новое событие 'send mess',
-				// в событие передаем различные параметры и данные
+				// Р’ СЃРѕРєРµС‚ РѕС‚СЃС‹Р»Р°РµРј РЅРѕРІРѕРµ СЃРѕР±С‹С‚РёРµ 'send mess',
+				// РІ СЃРѕР±С‹С‚РёРµ РїРµСЂРµРґР°РµРј СЂР°Р·Р»РёС‡РЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ Рё РґР°РЅРЅС‹Рµ
 				socket.emit('send mess', {mess: $textarea.val(), name: $name.val(), className: alertClass});
-				// Очищаем поле с сообщением
+				// РћС‡РёС‰Р°РµРј РїРѕР»Рµ СЃ СЃРѕРѕР±С‰РµРЅРёРµРј
 				$textarea.val('');
 			});
 
-			// Здесь отслеживаем событие 'add mess', 
-			// которое должно приходить из сокета в случае добавления нового сообщения
+			// Р—РґРµСЃСЊ РѕС‚СЃР»РµР¶РёРІР°РµРј СЃРѕР±С‹С‚РёРµ 'add mess', 
+			// РєРѕС‚РѕСЂРѕРµ РґРѕР»Р¶РЅРѕ РїСЂРёС…РѕРґРёС‚СЊ РёР· СЃРѕРєРµС‚Р° РІ СЃР»СѓС‡Р°Рµ РґРѕР±Р°РІР»РµРЅРёСЏ РЅРѕРІРѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ
 			socket.on('add mess', function(data) {
-				// Встраиваем полученное сообщение в блок с сообщениями
-				// У блока с сообщением будет тот класс, который соответвует пользователю что его отправил
+				// Р’СЃС‚СЂР°РёРІР°РµРј РїРѕР»СѓС‡РµРЅРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ РІ Р±Р»РѕРє СЃ СЃРѕРѕР±С‰РµРЅРёСЏРјРё
+				// РЈ Р±Р»РѕРєР° СЃ СЃРѕРѕР±С‰РµРЅРёРµРј Р±СѓРґРµС‚ С‚РѕС‚ РєР»Р°СЃСЃ, РєРѕС‚РѕСЂС‹Р№ СЃРѕРѕС‚РІРµС‚РІСѓРµС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ С‡С‚Рѕ РµРіРѕ РѕС‚РїСЂР°РІРёР»
 				$all_messages.append("<div class='alert alert-" + data.className + "'><b>" + data.name + "</b>: " + data.mess + "</div>");
 			});
 
