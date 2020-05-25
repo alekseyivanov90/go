@@ -1,0 +1,7 @@
+as.unshift('Usser 43Usser 48privet'); 
+as.unshift('Usser 48Usser 43privet'); 
+as.unshift('Usser 49Usser 48urivet'); 
+as.unshift('Usser 48Usser 43kak dela&'); 
+as.unshift('Usser 43Usser 48otlichno'); 
+as.unshift('Usser 43Usser 49Chto xochesh'); 
+as.unshift('Usser 48Usser 49chto'); 
