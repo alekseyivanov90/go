@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/public/bootstrap.min.css">
+	<link rel="shortcut icon" href="public/fav.png">
+    <title>Онлайн чат!</title>
+  </head>
+  <script>
+	function udl(){document.cookie = ""; location.reload();}
+  </script>
+  <body>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+		<a class="my-0 mr-md-auto" href="/">Анонимной чат!</a>
+		<nav class="my-2 my-md-0 mr-md-3">
+			<a class="p-2 text-dark" href="/mess"> Собщение </a>
+			<a class="p-2 text-dark" href="/I"> Мой профил </a>
+			<a class="p-2 text-dark" href="/help"> Помошь! </a>
+			<a class="p-2 text-dark" onclick="udl()" href="#"> Удалится </a>
+		</nav>
+		<a class="btn btn-outline-primary" href="/reg">Сохранить ползователя</a>
+	</div>
+	<p><span id = "us">Я usser 1 </span>Пишу <span id = "us2"> usser /Выперите кого хотите написать</span></p>
+	<dir class = "block1">
+		<ul id="sp">
+		 <li onclick="zar(0)">Admin</li>
+		 <li onclick="zar(1)">User</li>
+		 <li onclick="zar(2)">User</li>
+		 <li onclick="zar(3)">User</li>
+		 <li onclick="zar(4)">User</li>
+		 <li onclick="zar(5)">User</li>
+		 <li onclick="zar(6)">User</li>
+		 <li onclick="zar(7)">User</li>
+		 <li onclick="zar(8)">User</li>
+		 <li onclick="zar(9)">User</li>
+		 <li onclick="zar(10)">User</li>
+		 <li onclick="zar(11)">User</li>
+		 <li onclick="zar(12)">User</li>
+		 <li onclick="assers()"> Переод > </li>
+		 <li onclick="assers1()"> - Назад </li>
+		</ul>
+	</dir>
+<script src="/public/us.txt"></script>
+<script>
+document.getElementById("us").style="font-size: 20px; font-style: italic; font-weight: 600;"
+var cco = document.cookie;
+document.getElementById("us").innerText = cco+" ";
+var users = use.slice(6);
+function forr() {for(i=1;i<13;i++){if(users > Number(use.slice(6))){users = Number(use.slice(6))-11; break}; if(users<0){break}; document.getElementsByTagName('li')[i].innerText = "Usser "+ users--;};}; forr();
+function assers(){forr();};
+function assers1(){users = users + 24; forr();};
+function zar(a) {
+                var spis = document.getElementsByTagName('li')[a].innerText;
+				localStorage.setItem('r', spis);
+				location.href = '/';}
+</script>
+  </body>
+</html>
