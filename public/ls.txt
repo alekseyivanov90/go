@@ -1,4 +1,0 @@
-as.unshift('Usser 43Usser 48privet'); 
-as.unshift('Usser 48Usser 43privet'); 
-as.unshift('Usser 49Usser 48urivet'); 
-
