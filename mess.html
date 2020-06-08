@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/public/bootstrap.min.css">
+	<link rel="shortcut icon" href="public/fav.png">
+    <title>Онлайн чат!</title>
+  </head>
+    <script>
+	var as = [];
+	function udl(){document.cookie = 0; location.href="/rus";}
+  </script>
+  <body>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+		 &nbsp; &nbsp; <a style="font-size: 180%;" class="my-0 mr-md-auto" href="/"> Анонимной чат!</a>
+		<nav class="my-2 my-md-0 mr-md-3">
+			<a class="p-2 text-dark" href="/users"> Найти ползовотелей </a>
+			<a class="p-2 text-dark" href="/help"> Помошь! </a>
+			<a class="p-2 text-dark" onclick="udl()" href="#"> Удалится </a>
+		</nav>
+		<a class="btn btn-outline-primary" href="/reg">Сохранить ползователя</a>
+	</div>
+	<p> &nbsp; <span id = "us" style="font-size: 20px; font-style: italic; font-weight: 600;"> &nbsp; Я usser 1 </span>Пишу 
+	<span id = "us2"> usser /Выперите кого хотите написать</span></p>
+	<dir class = "block1">
+		<ul id="sp">
+		 <li onclick="zar(0)">Admin</li>
+		 <li onclick="zar(1)"></li>
+		 <li onclick="zar(2)"></li>
+		 <li onclick="zar(3)"></li>
+		 <li onclick="zar(4)"></li>
+		 <li onclick="zar(5)"></li>
+		 <li onclick="zar(6)"></li>
+		 <li onclick="zar(7)"></li>
+		 <li onclick="zar(8)"></li>
+		 <li onclick="zar(9)"></li>
+		 <li onclick="zar(10)"></li>
+		 <li onclick="zar(11)"></li>
+		 <li onclick="zar(12)"></li>
+		</ul>
+	</dir>
+<script src="/public/us.txt"></script>
+<script src="/public/ls.txt"></script>
+<script>
+var cco = document.cookie;
+document.getElementById("us").innerHTML = "<a href='/reg'>"+cco+" </a>";
+var mas = [];
+var st = [];
+var st1 = [];
+var eer = [];
+for(i=0;i<as.length;i++){if(as[i].includes(cco)){ mas.push(as[i])};}
+for(i=0;i<mas.length;i++){st[i] = mas[i].slice(8, 16);}
+for(i=0;i<mas.length;i++){st1[i] = mas[i].slice(0, 8);}
+for(i=0; i<st1.length; i++){st.push(st1[i])};
+var sst = new Set(st);
+for (let value of sst){eer.push(value);};
+for(i=0;i<eer.length;i++){
+if(cco==eer[i]){continue};
+	document.getElementsByTagName('li')[i].innerText = eer[i];};
+function zar(a) {
+                var spis = document.getElementsByTagName('li')[a].innerText;
+				localStorage.setItem('r', spis);
+				location.href = '/';}
+</script>
+  </body>
+</html>
