@@ -1,0 +1,7 @@
+var U233 = {name: 'Usser 233', pol: 'muj', } 
+var U23 = {name: 'Usser 23', pol: 'muj', } 
+var U28 = {name: 'Usser 28', pol: 'muj', } 
+var U27 = {name: 'Usser 27', pol: 'jen', } 
+var U29 = {name: 'Usser 29', pol: 'jen', } 
+var U32 = {name: 'Usser 32', pol: 'jen', } 
+var U33 = {name: 'Usser 33', pol: 'jen', } 
